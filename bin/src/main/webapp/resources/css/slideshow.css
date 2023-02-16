@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Next & previous buttons */
+
+
+/* Caption text */
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.text > .couponSalerate {
+	font-size: 20px;
+	color: #309cef;
+}
+.text > .couponCostsale {
+	font-size: 20px;
+	color: #030305;
+}
+.text > .couponCostori {
+	font-size: 14px;
+	text-decoration: line-through;
+}
+/* Fading animation */
+.fade, .reviewFade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}

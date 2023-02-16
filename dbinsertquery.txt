@@ -1,0 +1,916 @@
+insert into member (member_code, member_date, member_mail, member_pwd, member_name, member_phone, member_status)values ('member', sysdate, 'test@naver.com', '1234', 'test', '010-1234-5678', 'Y');
+
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'비비비당', 	'부산광역시 해운대구 달맞이길 239-16', 	'해운대구', 	'051-746-0705', 	'기타', 	'오늘의 차 10,000원', 	'10:30 - 22:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '1.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\1.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '1-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\1-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+																																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'할매국밥', 	'부산광역시 동구 중앙대로533번길 4', 	'동구', 	'051-646-6295', 	'한식', 	'따로국밥 7,000원', 	'10:00 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '2.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\2.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '2-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\2-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'톤쇼우', 	'부산광역시 수영구 광안해변로279번길 13', 	'수영구', 	'051-752-7978', 	'일식', 	'버크셔K로스카츠 14,500원', 	'11:30 - 20:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '3.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\3.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '3-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\3-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'합천국밥집', 	'부산광역시 남구 용호로 235', 	'남구', 	'051-628-4898', 	'한식', 	'따로국밥 10,000원', 	'09:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '4.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\4.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));	
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '4-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\4-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'해목', 	'부산광역시 해운대구 구남로24번길 8', 	'해운대구', 	'0507-1385-3730', 	'일식', 	'특히츠마부시(민물장어) 56,000원', 	'11:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '5.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\5.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '5-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\5-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'신발원', 	'부산광역시 동구 대영로243번길 62', 	'동구', 	'051-467-0177', 	'중식', 	'고기만두 (8개) 6,000원', 	'11:00 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '6.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\6.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '6-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\6-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'평산옥', 	'부산광역시 동구 초량중로 26', 	'동구', 	'051-468-6255', 	'한식', 	'수육 (1인) 10,000원', 	'10:10 - 20:00', 	'일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '7.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\7.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '7-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\7-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+																
+						
+                        										
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'다이닝룸', 	'부산광역시 해운대구 마린시티1로 51 파크하얏트부산호텔 32F', 	'해운대구', 	'051-990-1234', 	'양식', 	'더파크블랙퍼스트 45,000원', 	'월-금: 06:30 - 22:00, 토-일: 12:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '8.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\8.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+		
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '8-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\8-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'해운대소문난암소갈비집', 	'부산광역시 해운대구 중동2로10번길 32-10', 	'해운대구', 	'051-746-0033', 	'한식', 	'생갈비 (180g) 48,000원', 	'11:30 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '9.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\9.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));	
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '9-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\9-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'고옥', 	'부산광역시 수영구 광남로 6', 	'수영구', 	'051-622-1638', 	'일식', 	'히츠마부시 (대) 34,000원', 	'11:30 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '10.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\10.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '10-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\10-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'이재모피자', 	'부산광역시 중구 광복중앙로 31 2F', 	'중구', 	'051-245-1478', 	'양식', 	'이재모치즈크러스트피자 (S) 24,000원', 	'11:00 - 21:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '11.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\11.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '11-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\11-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'마가만두', 	'부산광역시 동구 대영로243번길 56', 	'동구', 	'051-468-4059', 	'중식', 	'물만두 6,000원', 	'11:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '12.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\12.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '12-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\12-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'동백섬횟집', 	'부산광역시 해운대구 해운대해변로209번나길 17', 	'해운대구', 	'051-741-3888', 	'기타', 	'점심특선 (점심특선) 15,000원', 	'10:30 - 22:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '13.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\13.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '13-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\13-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'나가하마만게츠', 	'부산광역시 해운대구 우동1로 57 대영빌딩 1F', 	'해운대구', 	'051-731-0886', 	'일식', 	'나가하마라멘 9,000원', 	'월-금: 11:30 - 20:30, 토-일: 11:00 - 20:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '14.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\14.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '14-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\14-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'이가네떡볶이', 	'부산광역시 중구 부평1길 48', 	'중구', 	'051-245-0413', 	'한식', 	'떡볶이튀김세트 5,000원', 	'10:00 - 17:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '15.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\15.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '15-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\15-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'달인막창', 	'부산광역시 해운대구 중동1로19번길 13', 	'해운대구', 	'051-731-7792', 	'한식', 	'달인막창세트 60,000원', 	'16:00 - 01:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '16.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\16.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '16-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\16-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'블랙업커피', 	'부산광역시 부산진구 서전로10번길 41', 	'부산진구', 	'051-944-4952', 	'기타', 	'아메리카노 4,500원', 	'10:00 - 23:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '17.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\17.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '17-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\17-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'금수복국', 	'부산광역시 해운대구 중동1로43번길 23', 	'해운대구', 	'051-742-3600', 	'기타', 	'은복국 (기본) 12,000원', 	'00:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '18.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\18.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '18-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\18-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'거대갈비', 	'부산광역시 해운대구 달맞이길 22', 	'해운대구', 	'051-746-0037', 	'한식', 	'등심 59,000원', 	'11:30 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '19.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\19.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '19-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\19-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'명성횟집', 	'부산광역시 해운대구 우동1로20번가길 4', 	'동구', 	'051-468-8089', 	'기타', 	'회백반 13,000원', 	'11:00 - 22:00', 	'일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '20.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\20.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+INSERT INTO coupon(coupon_code, food_code, coupon_name, coupon_startdate, coupon_enddate, coupon_costori, coupon_salerate, coupon_costsale, coupon_intro, coupon_status) 
+VALUES('coupon'||LPAD(seqcoupon.nextval,4,0), 'food'||LPAD(seqFood.CURRVAL,4,0), '쿠폰', TO_DATE('2023-02-01', 'YYYY-MM-DD'), TO_DATE('2023-07-01','YYYY-MM-DD'), 20000, 10, 18000, '저렴한 가격으로 맛있는 음식을 먹으실수 있습니다!', 'Y');
+
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES
+('image'||LPAD(SEQimage.nextval,4,0),         '20-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\20-1.jpg',         100000,         'coupon'||LPAD(seqcoupon.CURRVAL,4,0));        
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'빨간떡볶이', 	'부산광역시 해운대구 우동1로20번가길 4', 	'해운대구', 	'051-743-2814', 	'한식', 	'떡볶이 (1인분) 2,500원', 	'11:00 - 18:00', 	'일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '21.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\21.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));	
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 3);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '21-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\21-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'디젤앤카멜리아스', 	'부산광역시 해운대구 우동1로20번길 11', 	'해운대구', 	'010-9179-6960', 	'일식', 	'시오탄멘 9,000원', 	'월-금: 11:30 - 20:00, 토-일: 11:00 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '22.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\22.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '22-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\22-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'포르타나', 	'부산광역시 해운대구 우동1로20번길 21', 	'해운대구', 	'051-741-1131', 	'양식', 	'마르게리따 6,300원', 	'12:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '23.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\23.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));	
+
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '23-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\23-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'미청식당', 	'부산광역시 기장군 일광면 기장해안로 1303', 	'기장군', 	'051-721-7050', 	'한식', 	'앙장구밥 18,000원', 	'10:00 - 20:30', 	'둘째/넷째 수', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '24.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\24.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));	
+
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '24-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\24-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'초필살돼지구이', 	'부산광역시 수영구 광남로108번길 9 1F', 	'수영구', 	'051-757-5515', 	'한식', 	'필살껍데기 7,500원', 	'월-금: 16:00 - 22:00, 토-일: 13:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '25.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\25.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 3);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '25-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\25-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'미청식당', 	'부산광역시 기장군 일광면 기장해안로 1303', 	'기장군', 	'051-721-7050', 	'한식', 	'앙장구밥18,000원', 	'10:00 - 20:30', 	'월-금: 15:30 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '26.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\26.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '26-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\26-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'초필살돼지구이 ', 	'부산광역시 수영구 광남로108번길 9 1F', 	'수영구', 	'051-757-5515', 	'한식', 	'필살껍데기7,500원', 	'16:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '27.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\27.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 3);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '27-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\27-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'백객도', 	'부산광역시 동래구 금정마을로 70', 	'동래구', 	'051-554-5873', 	'중식', 	'자장면4,000원', 	'11:00 - 14:00', 	'화', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '28.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\28.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '28-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\28-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'소문난돼지국밥', 	'부산광역시 영도구 남항로31번길 46', 	'영도구', 	'051-416-1546', 	'한식', 	'수육백밥', 	'09:30 - 22:00', 	'첫째/셋째 일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '29.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\29.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '29-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\29-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'수수하지만굉장해 ', 	'부산광역시 부산진구 서전로68번길 98 1F', 	'부산진구', 	'051-808-6860', 	'양식', 	'돈까스', 	'11:30 - 19:30', 	'	14:30 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '30.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\30.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+
+insert into review (review_code, food_code, member_code, review_date, review_cont, review_score) values ('REVIEW'||LPAD(SEQREVIEW.nextval,4,0),  'food'||LPAD(seqFood.CURRVAL,4,0), 'member', sysdate, '맛있어요!', 5);												
+												
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES												
+('image'||LPAD(SEQimage.nextval,4,0),         '30-1.jpg',         'C:\spring\eatthebusan\src\main\resources\static\ftp\30-1.jpg',         100000,         'REVIEW'||LPAD(SEQREVIEW.CURRVAL,4,0));												
+
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'물꽁식당', 	'부산광역시 중구 흑교로59번길 3', 	'중구', 	'051-257-3230', 	'일식', 	'아구찜 (소)', 	'09:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '31.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\31.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'그랜드조선부산라운지앤바 ', 	'부산광역시 해운대구 해운대해변로 292 2F', 	'해운대구', 	'051-922-5030', 	'카페', 	'AFTERNOON TEA SET', 	'10:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '32.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\32.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'옥천횟집', 	'부산광역시 영도구 중리남로 2-21', 	'영도구', 	'051-403-7771', 	'일식', 	'성게김밥', 	null, 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '33.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\33.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'아리아', 	'부산광역시 해운대구 해운대해변로 292 2F', 	'해운대구', 	'051-922-5050', 	'양식', 	'뷔페', 	null, 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '34.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\34.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'흰여울비치', 	'부산광역시 영도구 절영로 236', 	'영도구', 	'051-111-1111', 	'카페', 	'아메리카노', 	'11:00 - 20:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '35.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\35.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'카페덕미', 	'부산광역시 기장군 기장읍 동암해안길 77', 	'기장군', 	'0507-1384-5820', 	'카페', 	'오레오치즈케이크', 	'11:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '36.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\36.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'국제밀면 ', 	'부산광역시 연제구 중앙대로1235번길 23-6 다세대주택', 	'연제구', 	'051-501-5507', 	'한식', 	'물밀면', 	'10:00 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '37.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\37.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'로바타아키', 	'부산광역시 부산진구 동천로85번길 8', 	'부산진구', 	'0507-1322-3415', 	'일식', 	'닭 모리아와세 (1인)', 	'18:00 - 01:00', 	'24:00 이후', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '38.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\38.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'딤타오', 	'부산광역시 해운대구 우동1로 25', 	'해운대구', 	'051-741-3638', 	'한식', 	'하가우', 	'11:30 - 20:30', 	'15:00 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '39.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\39.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'라호짬뽕', 	'부산광역시 해운대구 마린시티1로 137 대우월드마크 110호', 	'해운대구', 	'051-731-1222', 	'중식', 	'라짬뽕', 	'11:30 - 22:00', 	'15:00 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '40.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\40.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'동경밥상', 	'부산광역시 수영구 남천바다로 34-6', 	'수영구', 	'070-7576-1428', 	'일식', 	'우나쥬 (민물장어덮밥)', 	'11:30 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '41.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\41.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'리안광 ', 	'부산광역시 수영구 광남로 78', 	'수영구', 	'0507-1316-4591', 	'양식', 	'에그베네딕트', 	'09:00 - 16:00', 	'	월-금: 15:00, 토-일: 16:00 이후', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '42.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\42.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'원향재', 	'부산광역시 동구 대영로243번길 60', 	'동구', 	'051-467-4868', 	'중식', 	'자장면6,000원', 	'11:00 - 22:00', 	'	첫째/셋째 화', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '43.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\43.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'모티 ', 	'부산광역시 동구 망양로 669', 	'동구', 	'051-469-8253', 	'카페', 	'칵테일', 	'18:00 - 01:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '44.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\44.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'백설대학 ', 	'부산광역시 영도구 웃서발로 74', 	'영도구', 	'051-404-5039', 	'한식', 	'김밥', 	'11:30 - 21:00', 	'	14:20 - 15:40', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '45.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\45.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'거대곰탕', 	'부산광역시 부산진구 중앙대로 672 삼정타워 5F 501호', 	'부산진구', 	'051-809-2223', 	'한식', 	'진한 사골곰탕', 	'11:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '46.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\46.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'고릴라브루잉', 	'부산광역시 수영구 광남로 125', 	'수영구', 	'070-4837-6258', 	'양식', 	'폴드포크 샌드위치12,000원', 	'17:00 - 23:00', 	'일-목: 22:00, 금-토: 23:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '47.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\47.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'바릇식당 ', 	'부산광역시 기장군 일광면 문오성길 61 1F', 	'기장군', 	'070-8845-7277', 	'일식', 	'꼬막대판', 	'11:00 - 20:00', 	'월-금: 15:30 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '48.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\48.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'일광대복집', 	'부산광역시 기장군 일광면 이화로 3', 	'기장군', 	'051-721-1561', 	'일식', 	'까치복국', 	'	08:00 - 21:00', 	'20:20 이후', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '49.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\49.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'치킨버거클럽', 	'부산광역시 부산진구 서전로58번길 121 1F', 	'부산진구', 	'051-947-4744', 	'양식', 	'클래식', 	'	11:40 - 21:30', 	'	월-금: 16:00 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '50.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\50.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'포인카츠', 	'부산광역시 해운대구 우동1로38번가길 11', 	'해운대구', 	'070-8887-3266', 	'일식', 	'포인카츠 15,000원', 	'11:30 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '51.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\51.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'와일드웨이브', 	'부산광역시 해운대구 송정중앙로5번길 106-1', 	'해운대구', 	'051-702-0839', 	'기타', 	'2만원-3만원', 	'18:00 - 24:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '52.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\52.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'고향연화', 	'부산광역시 기장군 기장읍 연화길 33-8', 	'기장군', 	'051-724-9005', 	'일식', 	'만원-2만원', 	'11:30 - 20:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '53.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\53.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'퍼주는집', 	'부산광역시 해운대구 달맞이길65번길 21', 	'해운대구', 	'051-742-8838', 	'기타', 	'2만원-3만원', 	'17:00 - 06:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '54.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\54.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'풍원장 미역국정찬', 	'부산광역시 해운대구 마린시티3로 51 더샵 아델리스 상가 110호', 	'해운대구', 	'051-747-5115', 	'한식', 	'시원한 조개 미역국 정찬 16,000원', 	'08:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '55.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\55.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'칸다소바', 	'부산광역시 부산진구 동천로 105', 	'부산진구', 	'051-809-1662', 	'일식', 	'마제소바 9,500원', 	'11:30 - 21:30', 	'15:00 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '56.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\56.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'양산국밥', 	'부산광역시 해운대구 좌동로10번길 75', 	'해운대구', 	'051-703-3544', 	'한식', 	'토렴국밥9,000원', 	'09:00 - 23:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '57.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\57.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'제일산꼼장어장어구이', 	'부산광역시 중구 자갈치해안로 65', 	'중구', 	'051-245-8990', 	'기타', 	'꼼장어 소 (국내산) 50,000원', 	'10:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '58.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\58.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'남천동 보성녹차 팥빙수', 	'부산광역시 수영구 수영로394번길 28', 	'수영구', 	'051-625-5544', 	'카페', 	'팥빙수 3,000원', 	'10:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '59.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\59.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'짱떡볶이 ', 	'부산광역시 해운대구 우동3로11번길 10', 	'해운대구', 	'051-742-4654', 	'한식', 	'순대3,000원', 	'10:00 - 21:00', 	'일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '60.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\60.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'슈발츠발트', 	'부산광역시 수영구 민락본동로19번길 36-11', 	'수영구', 	'0507-1305-6535', 	'카페', 	'아메리카노 4,500원', 	'12:00 - 21:00', 	'목', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '61.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\61.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'타이가텐푸라', 	'부산광역시 해운대구 중동1로43번길 9 1F', 	'해운대구', 	'051-731-1914', 	'일식', 	'타이가텐동 9,500원', 	'11:30 - 20:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '62.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\62.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'수변최고돼지국밥', 	'부산광역시 수영구 광안해변로370번길 9-32', 	'수영구', 	'051-754-9222', 	'기타', 	'고기국밥 8,000원', 	'08:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '63.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\63.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'봉샌드', 	'부산광역시 남구 수영로334번길 56-3', 	'남구', 	'051-622-5185', 	'카페', 	'봉샌드 토스트 도시락7,900원', 	'09:00 - 19:30', 	'15:00 - 16:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '64.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\64.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'할매집원조복국', 	'부산광역시 해운대구 달맞이길62번길 28', 	'해운대구', 	'051-747-7625', 	'기타', 	'은복 10,000원', 	'00:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '65.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\65.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'진미횟집', 	'부산광역시 수영구 광안해변로 207 W모텔 1F', 	'수영구', 	'051-758-8700', 	'기타', 	'세꼬시 (1인)20,000원', 	'11:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '66.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\66.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'문화양곱창', 	'부산광역시 부산진구 가야대로784번길 56-8', 	'부산진구', 	'051-808-2072', 	'기타', 	'양곱창18,000원', 	'16:00 - 01:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '67.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\67.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'초원복국', 	'부산광역시 해운대구 해운대해변로 329-2', 	'해운대구', 	'051-743-5291', 	'기타', 	'은복12,000원', 	'08:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '68.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\68.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'공순대', 	'부산광역시 중구 중구로29번길 18-5', 	'중구', 	'051-231-9209', 	'기타', 	null, 	'12:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '69.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\69.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'김유순대구뽈찜전문집', 	'부산광역시 남구 진남로 15', 	'남구', 	'051-627-4319', 	'기타', 	'대40,000원', 	'월-금: 11:30 - 21:00 토-일: 11:30 - 22:00', 	'', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '70.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\70.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'국이네낙지볶음', 	'부산광역시 수영구 연수로 410', 	'수영구', 	'051-754-7776', 	'기타', 	'낙곱새9,000원', 	'10:30 - 22:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '71.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\71.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'박고지김밥', 	'부산광역시 수영구 수영로603번길 14', 	'수영구', 	'051-755-0960', 	'한식', 	null, 	'09:00 - 15:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '72.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\72.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'구름에', 	'부산광역시 영도구 흰여울길 253', 	'영도구', 	'051-710-6141', 	'카페', 	null, 	'09:00 - 19:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '73.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\73.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'1984나폴리', 	'부산광역시 부산진구 전포대로209번길 17-6', 	'부산진구', 	'051-816-1984', 	'양식', 	'한우채끝스테이크32,000원', 	'12:00 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '74.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\74.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'대성밀냉면', 	'부산광역시 중구 보수대로44번길 6', 	'중구', 	'051-244-9658', 	'기타', 	'냉면8,000원', 	'10:30 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '75.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\75.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'공원칼국수', 	'부산광역시 남구 유엔평화로 110', 	'남구', 	'051-611-3913', 	'한식', 	'물총조개탕 10,000원', 	'10:50 - 21:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '76.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\76.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'탐복', 	'부산광역시 기장군 일광면 문오성길 31', 	'기장군', 	'051-727-4213', 	'한식', 	'탐복죽 12,000원', 	'10:50 - 21:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '77.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\77.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'류센소', 	'부산광역시 수영구 남천바다로33번길 27 1F', 	'수영구', 	'070-7543-6063', 	'일식', 	'돈코츠라멘 9,000원', 	'10:00 - 03:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '78.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\78.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'호찐빵', 	'부산광역시 기장군 일광면 일광로 123', 	'기장군', 	'051-722-7025', 	'기타', 	'찐빵 (5개) 4,000원', 	'	10:00 - 23:30', 	'연중무휴', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '79.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\79.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'고래사어묵(해운대점)', 	'부산광역시 해운대구 구남로 14', 	'해운대구', 	'1577-9820', 	'기타', 	'문어손 2,000원', 	'	10:00 - 21:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '80.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\80.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'밀양순대돼지국밥', 	'부산광역시 해운대구 구남로 28 1F', 	'해운대구', 	'051-731-7005', 	'한식', 	'돼지국밥 8,000원', 	'	00:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '81.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\81.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'쌍둥이돼지국밥', 	'부산광역시 남구 유엔평화로 35-1', 	'남구', 	'051-628-7020', 	'한식', 	'돼지국밥 7,000원', 	'	09:00 - 24:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '82.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\82.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'원조밀면', 	'부산광역시 중구 중구로 31-1', 	'중구', 	'051-244-2555', 	'한식', 	'물밀면 (소) 6,000원', 	'08:00 - 20:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '83.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\83.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'왔다식당', 	'부산광역시 영도구 하나길 811', 	'영도구', 	'051-412-2676', 	'한식', 	'스지맑은전골 12,000원', 	'월-금: 08:30 - 19:00', 	'일', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '84.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\84.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'광안리막창집', 	'부산광역시 수영구 민락로6번길 28 1F', 	'수영구', 	'051-753-2378', 	'한식', 	'소곱창전골 (대) 45,000원', 	'17:00 - 02:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '85.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\85.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'나이브브류어스', 	'부산광역시 부산진구 전포대로186번길 37', 	'부산진구', 	'010-3856-5309', 	'카페', 	'아메리카노 5,000원', 	'11:30 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '86.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\86.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'라발스스카이카페앤바', 	'부산광역시 영도구 봉래나루로 82 라발스호텔 28F', 	'영도구', 	'051-790-1543', 	'카페', 	'카페라떼 6,000원', 	'10:30 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '87.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\87.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'버거인뉴욕', 	'부산광역시 해운대구 해운대해변로298번길 9', 	'해운대구', 	'051-743-0144', 	'양식', 	'시카고핫도그 9,000원', 	'10:30 - 20:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '88.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\88.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'대쿠이', 	'부산광역시 부산진구 전포대로175번길 39 1F', 	'부산진구', 	'051-802-0597', 	'일식', 	'쿠이모듬카츠 12,500원', 	'11:30 - 21:00', 	'14:50 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '89.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\89.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'자갈치횟집', 	'부산광역시 수영구 수영로702번길 28', 	'수영구', 	'051-757-5600', 	'한식', 	'2인 코스 60,000원', 	'11:30 - 22:00', 	'월-금: 14:30 - 16:30', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '90.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\90.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'냉수탕가든', 	'부산광역시 부산진구 가야공원로 107', 	'부산진구', 	'051-897-5252', 	'한식', 	'오리불고기 38,000원', 	'11:00 - 21:40', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '91.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\91.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'해성막창집', 	'부산광역시 해운대구 센텀동로 90 117호', 	'해운대구', 	'051-782-8228', 	'한식', 	'막창 10,000원', 	'일-목: 13:00 - 23:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '92.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\92.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'선창횟집', 	'부산광역시 해운대구 달맞이길62번길 67', 	'해운대구', 	'051-747-7470', 	'한식', 	'선창코스 35,000원', 	'11:30 - 23:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '93.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\93.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'목장원', 	'부산광역시 영도구 절영로 355', 	'영도구', 	'051-404-5000', 	'한식', 	'한우꽃갈비살 55,000원', 	'11:30 - 21:30', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '94.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\94.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'대도식당', 	'부산광역시 해운대구 동백로 52 2F', 	'해운대구', 	'051-726-8801', 	'한식', 	'한우 생등심 오리지널 컷 46,000원', 	'07:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '95.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\95.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'삼삼횟집', 	'부산광역시 해운대구 달맞이길62번길 29', 	'해운대구', 	'051-784-0333', 	'한식', 	'3종 회 27,000원', 	'12:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '96.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\96.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'요이쿠마', 	'부산광역시 수영구 광안해변로307번길 20 1F', 	'수영구', 	'051-755-5497', 	'일식', 	'쿠마텐동 14,000원', 	'11:30 - 21:00', 	'15:00 - 17:00', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '97.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\97.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'쿤타', 	'부산광역시 영도구 태종로 318', 	'영도구', 	'010-3758-7499', 	'양식', 	'샌드위치 5,000원', 	'09:00 - 20:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '98.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\98.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'해운대하얀오징어집', 	'부산광역시 해운대구 달맞이길50번길 4', 	'해운대구', 	'051-741-4557', 	'한식', 	'오징어회 40,000원', 	'12:00 - 22:00', 	null, 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '99.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\99.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));												
+																
+																
+insert into food (food_code, member_code, food_name, food_addr, food_area, food_phone, food_kind, food_menu, food_time, food_break, food_intro, food_date, food_read, food_status, food_tag)																
+values (	 'food'||LPAD(seqFood.nextval,4,0), 	null, 	'구포촌국수', 	'부산광역시 금정구 금샘로 490', 	'금정구', 	'051-515-1751', 	'한식', 	'보통 5,000원', 	'10:30 - 19:00', 	'월', 	null, 	sysdate, 	0, 	 'Y', 	null	);
+																
+INSERT INTO image (image_code, image_name, image_path, image_size, refer_code) VALUES 																
+('image'||LPAD(SEQimage.nextval,4,0),	 '100.jpg',	 'C:\spring\eatthebusan\src\main\resources\static\ftp\100.jpg', 	100000,	 'food'||LPAD(seqFood.CURRVAL,4,0));
+
+commit;
+																
+																
