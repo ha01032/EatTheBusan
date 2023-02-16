@@ -3,7 +3,7 @@
 맛집 추천/공유 및 쿠폰구매 가능
 
 사용법 
-1. C:\spring\eatthebusan 으로 프로젝트 복사 후 import
+1. C:\spring\eatthebusan 이름으로 프로젝트 복사 후 import
 2. application.properties에 포트 및 oracle 정보 맞게 변경
 3. 스프링부트 실행 > Entity 완성됨
 4. 오라클 sql developer에 들어가서 dbsequenceQuery.txt와 dbinsertQuery.txt 복붙한 후 순서대로 스크립트 실행
