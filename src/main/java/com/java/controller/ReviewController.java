@@ -17,11 +17,7 @@ import com.java.service.ReviewService;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * @작성자 : 한문구
- * @작성일 : 2019. 12. 19.
- * @설명 : 리뷰 컨트롤러
- */
+
 
 @Controller
 @RequiredArgsConstructor

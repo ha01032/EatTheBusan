@@ -42,11 +42,6 @@ import com.java.repository.PurchaseRepository;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * @작성자 : 전지원
- * @작업일 : 2019. 12. 19.
- * @작업 내용 :  
-*/
 @Service
 @RequiredArgsConstructor
 @Transactional

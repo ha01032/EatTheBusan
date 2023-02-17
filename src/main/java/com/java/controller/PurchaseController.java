@@ -22,11 +22,6 @@ import com.java.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * @작성자 : 전지원
- * @작업일 : 2019. 12. 17.
- * @작업 내용 : PurchaseController
- */
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/purchase/*")

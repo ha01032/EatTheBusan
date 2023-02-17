@@ -45,11 +45,6 @@ import com.java.entity.Review;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- * @작성자 : 한문구
- * @작성일 : 2019. 12. 13.
- * @설명 : 음식점 서비스  
- */
 
 @Service
 @RequiredArgsConstructor

@@ -42,11 +42,6 @@ import lombok.extern.java.Log;
 //import com.java.dao.ImageDao;
 import com.java.dto.ImageDto;
 
-/**
- * @작성자 : 전지원
- * @작업일 : 2019. 12. 14.
- * @작업 내용 : insert & 식당코드 검색 작성
- */
 @Service
 @RequiredArgsConstructor
 @Transactional
