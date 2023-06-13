@@ -13,3 +13,4 @@
 /admin/*으로 접속후 시큐리티로그인 창이 뜨면 id: admin / pw: 1234 로 접속
 
 6/13 by lgb : "classPath"찾을 수 없는 오류가 뜨면 C:\Users\admin\.m2\repository\oracle\ojdbc6\11.2.0.3 에 ojdbc-11.2.0.3.jar을 넣기.(감사합니다 ㅠㅠ)
+(파일은 맨앞에 넣어 놨습니다.)
